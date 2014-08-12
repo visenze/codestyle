@@ -3523,11 +3523,11 @@ def CheckBraces(filename, clean_lines, linenum, error):
     #        '{ should almost always be at the end of the previous line')
 
   # An else clause should be on the same line as the preceding closing brace.
-  if Match(r'\s*else\b\s*(?:if\b|\{|$)', line):
-    prevline = GetPreviousNonBlankLine(clean_lines, linenum)[0]
-    if Match(r'\s*}\s*$', prevline):
-      error(filename, linenum, 'whitespace/newline', 4,
-            'An else should appear on the same line as the preceding }')
+  # if Match(r'\s*else\b\s*(?:if\b|\{|$)', line):
+  #   prevline = GetPreviousNonBlankLine(clean_lines, linenum)[0]
+  #   if Match(r'\s*}\s*$', prevline):
+  #     error(filename, linenum, 'whitespace/newline', 4,
+  #           'An else should appear on the same line as the preceding }')
 
   # If braces come on one side of an else, they should be on both.
   # However, we have to worry about "else if" that spans multiple lines!
@@ -5353,12 +5353,12 @@ def FlagCxx11Features(filename, clean_lines, linenum, error):
   # Flag unapproved C++11 headers.
   include = Match(r'\s*#\s*include\s+[<"]([^<"]+)[">]', line)
   if include and include.group(1) in ('cfenv',
-                                      'condition_variable',
+                                      #'condition_variable',
                                       'fenv.h',
                                       'future',
-                                      'mutex',
-                                      'thread',
-                                      'chrono',
+                                      #'mutex',
+                                      #'thread',
+                                      #'chrono',
                                       'ratio',
                                       'regex',
                                       'system_error',
