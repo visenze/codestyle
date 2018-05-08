@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jasmine": true
+  },
+  "extends": ["eslint-config-airbnb-base"],
+  "globals": {
+    "_": true,
+    "$": true,
+    "angular": true,
+    "Clipboard": true,
+    "CryptoJS": true,
+    "inject": true,
+    "loadImage": true,
+    "module": true,
+    "saveAs": true,
+    "echarts": true,
+    "JSZip": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "func-names": "off",
+    "function-paren-newline": "off",
+    "guard-for-in": "off",
+    "indent": "off",
+    "max-len": ["error", 180],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-continue": "off",
+    "no-restricted-syntax": "off",
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "no-new": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "object-curly-newline": "off",
+    "complexity": "off",
+    "import/no-unresolved": "off"
+  }
+}
