@@ -104,17 +104,11 @@
     ],
     "directive-selector": [
       true,
-      "attribute",
-      "vi",
-      "camelCase"
+      "attribute"
     ],
     "component-selector": [
       true,
-      "element",
-      [
-        "vi"
-      ],
-      "kebab-case"
+      "element"
     ],
     "ban": [
       true,
