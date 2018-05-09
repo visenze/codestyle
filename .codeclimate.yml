@@ -1,42 +1,52 @@
 version: "2"
 prepare:
+  # rules from https://github.com/visenze/codestyle
   fetch:
   - "https://raw.githubusercontent.com/visenze/codestyle/master/typescript/tslint.json"
   - "https://raw.githubusercontent.com/visenze/codestyle/master/javascript/.eslintrc.json"
   - "https://raw.githubusercontent.com/visenze/codestyle/master/scss/.scss-lint.yml"
 plugins:
+  # https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)
   duplication:
     enabled: true
     config:
       count_threshold: 3
+  # java
   sonar-java:
     config:
       minimum_severity: critical
     tests_patterns:
     - "**/src/test/**"
+  # python
   sonar-python:
     enabled: true
+  # golang
   gofmt:
     enabled: true
   golint:
     enabled: true
   govet:
     enabled: true
+  # typescript
   tslint:
     enabled: true
     config: tslint.json
+  # scss
   scss-lint:
     enabled: true
+  # javascript
   eslint:
     enabled: true
     channel: "eslint-4"
     config:
       config: .eslintrc.json
+# https://docs.codeclimate.com/docs/excluding-files-and-folders
 exclude_patterns:
 - "**/vendor/"
 - "**/3rdparty/"
 - "**/*.conf.js"
 - "**/*.config.js"
+# https://docs.codeclimate.com/docs/maintainability
 checks:
   argument-count:
     enabled: false
