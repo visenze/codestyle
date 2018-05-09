@@ -105,7 +105,7 @@
     "directive-selector": [
       true,
       "attribute",
-      "vi"
+      "vi",
       "camelCase"
     ],
     "component-selector": [
