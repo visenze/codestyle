@@ -35,6 +35,8 @@ plugins:
 exclude_patterns:
 - "**/vendor/"
 - "**/3rdparty/"
+- "**/*.conf.js"
+- "**/*.config.js"
 checks:
   argument-count:
     enabled: false
