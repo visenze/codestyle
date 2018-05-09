@@ -105,14 +105,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "hydra",
+      "vi"
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
       [
-        "hydra",
         "vi"
       ],
       "kebab-case"
