@@ -41,6 +41,9 @@ plugins:
     channel: "eslint-4"
     config:
       config: .eslintrc.json
+  # swift
+  tailor:
+    enabled: true
 # https://docs.codeclimate.com/docs/excluding-files-and-folders
 exclude_patterns:
 - "**/vendor/"
