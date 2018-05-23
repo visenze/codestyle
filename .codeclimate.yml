@@ -13,6 +13,7 @@ plugins:
       count_threshold: 3
   # java
   sonar-java:
+    enabled: true
     config:
       minimum_severity: critical
     tests_patterns:
