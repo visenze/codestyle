@@ -14,6 +14,9 @@ plugins:
   # java
   sonar-java:
     enabled: true
+    checks:
+      squid:S3776:
+        enabled: false
     config:
       minimum_severity: critical
       tests_patterns:
@@ -21,6 +24,9 @@ plugins:
   # python
   sonar-python:
     enabled: true
+    checks:
+      python:S3776:
+        enabled: false
   # golang
   gofmt:
     enabled: true
@@ -59,7 +65,11 @@ checks:
   file-lines:
     enabled: false
   method-complexity:
-    enabled: false
+    enabled: true
+    config:
+      # 3x relaxed from the default threshold
+      # So it is 60 for golang and 15 for all the other languages
+      threshold: 15
   method-count:
     enabled: false
   method-lines:
