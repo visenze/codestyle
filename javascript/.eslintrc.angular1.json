@@ -5,6 +5,8 @@
     "jasmine": false
   },
   "globals": {
+    /* moment.js */
+    "moment": true,
     /* auto/injector.js */
     "createInjector": false,
     /* angular.js */
