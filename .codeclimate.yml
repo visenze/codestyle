@@ -27,6 +27,9 @@ plugins:
     checks:
       python:S3776:
         enabled: false
+  # c++
+  cppcheck:
+    enabled: true
   # golang
   gofmt:
     enabled: true
