@@ -30,6 +30,9 @@ plugins:
   # c++
   cppcheck:
     enabled: true
+    checks:
+      unusedFunction:
+        enabled: false
   # golang
   gofmt:
     enabled: true
